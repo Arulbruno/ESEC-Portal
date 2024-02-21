@@ -1,0 +1,81 @@
+242. Valid Anagram
+Easy
+Topics
+Companies
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+ 
+
+Constraints:
+
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+ 
+
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+
+
+Solution : 
+
+
+//Java :
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+        //Solution 1 ::::::
+        // boolean flag=true;
+        // if(s.length()==t.length()){
+        //     for(int i=0;i<s.length();i++){
+        //         flag=false;
+        //         for(int j=0;j<t.length();j++){
+        //             if(s.charAt(i)==t.charAt(j)){
+        //                 flag=true;
+        //                 break;
+        //             }
+        //         }
+        //         if(!flag){
+        //             break;
+        //         }
+        //     }
+        //     if(flag){
+        //         return true;
+        //     }
+        //     else{
+        //         return false;
+        //     }
+        // }
+        // else{
+        //     return false;
+        // }
+
+        //Solution 2 :::::
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        // Convert strings to character arrays
+        char[] sArray = s.toCharArray();
+        char[] tArray = t.toCharArray();
+
+        // Sort both arrays
+        Arrays.sort(sArray);
+        Arrays.sort(tArray);
+
+        // Compare sorted arrays
+        return Arrays.equals(sArray, tArray);
+    }
+}
