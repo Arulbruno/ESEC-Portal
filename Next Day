@@ -1,0 +1,62 @@
+Find the next date far a given day.
+Input
+31/1/2022
+Output
+1/2/2022
+For example:
+Input
+31/1/2022
+Result
+1/2/2022
+
+
+Solution :
+//Java
+
+import java.util.*;
+public class Bruno {
+    public static int returnDate(int n,int m){
+        switch(n){
+            case 1:
+                case 3:
+                    case 5:
+                        case 7:
+                            case 8:
+                                case 10:
+                                    case 12:
+                                        return 31;
+                                        case 4:
+                                            case 6:
+                                                case 9:
+                                                    case 11:
+                                                        return 30;
+        }if(m%400==0||m%4==0){
+            return 29;
+        }   
+        else{
+            return 28;
+        }
+    }
+    public static void main(String[]args) {
+        Scanner a=new Scanner(System.in);
+        String s=a.next();
+        String str[]=s.split("/");
+        int arr[]=new int[3];
+        for(int i=0;i<3;i++){
+            arr[i]=Integer.parseInt(str[i]);
+        }
+        arr[0]++;
+        if(arr[0]<returnDate(arr[1],arr[2])){
+            System.out.print(arr[0]+"/"+arr[1]+"/"+arr[2]);
+        }
+        else{
+            arr[1]++;
+            arr[0]=1;
+            if(arr[1]>12){
+                arr[2]++;
+                arr[1]=1;
+            }
+            System.out.print(arr[0]+"/"+arr[1]+"/"+arr[2]);
+        }
+    }
+}
