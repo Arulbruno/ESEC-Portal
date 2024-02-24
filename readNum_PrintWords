@@ -1,0 +1,52 @@
+Write a Program to read a number from user and print it in words,
+For example:
+Input
+4372
+504
+Result
+Four Three Seven Two
+Five Zero Four
+
+Solution :
+//Java
+import java.util.*;
+public class readNum_PrintWords {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        String in = a.next();
+        char[] arr = in.toCharArray();
+        
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]=='1'){
+            System.out.print("One");
+            }
+              if(arr[i]=='2'){
+            System.out.print("Two");
+            }
+              if(arr[i]=='3'){
+            System.out.print("Three");
+            }
+              if(arr[i]=='4'){
+            System.out.print("Four");
+            }
+              if(arr[i]=='5'){
+            System.out.print("Five");
+            }
+              if(arr[i]=='6'){
+            System.out.print("Six");
+            }
+              if(arr[i]=='7'){
+            System.out.print("Seven");
+            }
+              if(arr[i]=='8'){
+            System.out.print("Eight");
+            }
+              if(arr[i]=='9'){
+            System.out.print("Nine");
+            }
+              if(arr[i]=='0'){
+            System.out.print("Zero");
+            }
+        }
+    }
+}
