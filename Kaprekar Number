@@ -1,0 +1,28 @@
+A Kaprekar number is a nan-negative integer, the representation of whose square in that base can be split into two parts that add up to the original
+number again, Far instance, 45 is a Kaprekar number, because 452 = 2025 and 20+25 = 45. Write a Program to find given number is Kaprekar number ot
+not.
+For exam ple:
+Input Result
+45
+13
+Kaprekar Number
+Not a Kaprekar Number
+
+Solution:
+//Java 
+
+import java.util.*;
+public class KaprekarNum {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        int sq = b * b;
+        int d = sq / 100;
+        int c = sq % 100;
+        if (d + c == b) {
+            System.out.print("Kaprekar Number");
+        } else {
+            System.out.print("Not a Kaprekar Number");
+        }
+    }
+}
