@@ -1,0 +1,30 @@
+Trendy Numbers
+A number is said to be a trendy number if and only if it has 3 digits and the middle digit is divisible by 3.
+Examples of Trendy Numbers: 131 264, 999
+Examples of Nan Trendy Numbers : 123, 653t 33, 4, 1034
+Write a program to find whether a given number is a Trendy Number or not.
+For example:
+Input Result
+235
+123
+Trendy Number
+Not a Trendy Number
+
+Solution :
+//Java 
+import java.util.*;
+
+public class TrendyNum {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        int c = b / 10;
+        int d = c % 10;
+        
+        if (d%3==0) {
+            System.out.println("Trendy Number");
+        } else {
+            System.out.println("Not a Trendy Number");
+        }
+    }
+}
