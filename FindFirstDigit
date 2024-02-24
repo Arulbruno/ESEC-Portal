@@ -1,0 +1,20 @@
+Write a program to find the first digit in a given number
+For example:
+Input Result
+30  3
+4065  4
+
+
+Solution :
+//Java 
+import java.util.*;
+public class FindFirstDigit {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        while (b >= 10) {
+            b = b / 10;
+        }
+        System.out.print(b);
+    }
+}
