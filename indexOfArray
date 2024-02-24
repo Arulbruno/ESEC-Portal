@@ -1,0 +1,39 @@
+Display the element in the nth index of the array
+NOTE: Array Index starts from O
+Input
+N - Gives the number of elements in the array
+N elements of the array
+K index of the element to be printed where K is between O to N-1
+Example
+3
+10 20 30
+0
+Output:
+10
+For exam ple:
+Input
+5
+1 2 3 4 5
+3
+output : 4
+10 20 30
+0
+output : 10
+
+Solution : 
+
+// Java 
+
+import java.util.*;
+public class indexOfArray{
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        int in=a.nextInt();
+        int arr[]=new int[in];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=a.nextInt();
+        }
+        int out=a.nextInt();
+        System.out.print(arr[out]);
+    }
+}
