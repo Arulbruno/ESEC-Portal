@@ -1,0 +1,43 @@
+Write a program to read n numbers and display the numbers in reverse order
+Input:
+5
+10 20 30 40 50
+Output:
+50 40 30 20 10
+For exam pie:
+Input
+5
+10 20 30 40 50
+Result
+50 
+40 
+30 
+20 
+10
+
+
+Solution : 
+// Java 
+import java.util.*;
+
+public class RevOrder {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        
+        // Read the number of elements
+        int b = a.nextInt();
+        
+        // Declare an array to store the elements
+        int[] arr = new int[b];
+        
+        // Read the elements
+        for (int i = 0; i < b; i++) {
+            arr[i] = a.nextInt();
+        }
+        
+        // Print the elements in reverse order
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
+    }
+}
