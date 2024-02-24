@@ -1,0 +1,22 @@
+Write a program to count the number of digits in a given number
+For example:
+Input Result
+7896  4
+657  3
+
+Solution :
+//Java 
+
+import java.util.*;
+public class CountNum {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int in = a.nextInt();
+        int co = 0;
+        while (in != 0) {
+            in /= 10;
+            co++;
+        }
+        System.out.print(co);
+    }
+}
