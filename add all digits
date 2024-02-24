@@ -1,0 +1,25 @@
+Write a program to add all digits of a given number
+For example:
+Input Result
+345
+303
+12
+6
+
+
+Solution : 
+//Java 
+import java.util.*;
+public class addAllDig {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        int d = 0; // Initialize d to store the sum
+        while (b != 0) {
+            int c = b % 10;
+            d += c;
+            b = b / 10;
+        }
+        System.out.print(d);
+    }
+}
