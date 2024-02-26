@@ -1,0 +1,30 @@
+Develop a program to interchange the first and last elements in the Array.
+Input Format:
+The first line of input N denotes the size of the list followed by N integers.
+For example:
+Input
+8
+1 29 51 9 17 6 7 23
+Result
+23 29 51 9 17 6 7 1
+
+
+Solution : 
+//Java 
+import java.util.*;
+public class InterChange_FirLast_Array {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b = a.nextInt();
+        int[] arr = new int[b];
+        for (int i = 0; i < b; i++) {
+            arr[i] = a.nextInt();
+        }
+        int st = arr[arr.length - 1];
+        arr[arr.length - 1] = arr[0];
+        arr[0] = st;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" );
+        }
+    }
+}
