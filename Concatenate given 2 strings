@@ -1,0 +1,18 @@
+Concatenate given 2 strings
+For example:
+Input   Result
+hello   helloworld
+world
+
+Solution:
+//Java
+
+import java.util.*;
+public class ConcatenateStr {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        String x = a.nextLine();
+        String y = a.nextLine();
+        System.out.print(x + y);
+    }
+}
