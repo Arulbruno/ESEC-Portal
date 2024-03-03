@@ -1,0 +1,124 @@
+Develop a program to print the addition and subtraction of two 2D matrices.
+The dimensions of the matrices are given as input first,
+
+Example:
+Input:
+2 2
+2 2
+
+1 2
+3 4
+
+4 5
+6 7
+Output:
+Addition:
+5
+7
+9
+11
+Subtraction:
+-3
+-3
+-3
+-3
+
+For example:
+Input    
+-2 -2   
+-2 -2
+Result
+Rami and column size should not be negative
+
+Input 
+3 4
+1 2    
+Result
+Rami and column size should be same for 2 matrices
+
+Input 
+3 3    
+3 3
+
+1 2 3 
+4 5 6
+7 8 9
+
+1 2 1
+3 4 1
+4 5 1  
+Result
+Addition :
+2
+4
+4
+7
+9
+7
+11
+13
+10
+Subtraction :
+0
+0
+2
+1
+1
+5
+3
+3
+8
+
+
+
+
+Solution :
+//Java
+
+import java.util.*;
+
+public class AddSum2DMat {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int w = a.nextInt();
+        int x = a.nextInt();
+        int y = a.nextInt();
+        int z = a.nextInt();
+        
+        if (w < 0 || x < 0 || y < 0 || z < 0) {
+            System.out.println("Row and column size should not be negative");
+        } else if (w != y || x != z) {
+            System.out.println("Row and column size should be same for 2 matrices");
+        } else {
+            int[][] aa = new int[w][x];
+            int[][] bb = new int[y][z];
+
+            for (int i = 0; i < w; i++) {
+                for (int j = 0; j < x; j++) {
+                    aa[i][j] = a.nextInt();
+                }
+            }
+
+            for (int i = 0; i < y; i++) {
+                for (int j = 0; j < z; j++) {
+                    bb[i][j] = a.nextInt();
+                }
+            }
+
+            System.out.println("Addition:");
+            for (int i = 0; i < w; i++) {
+                for (int j = 0; j < x; j++) {
+                    System.out.println(aa[i][j] + bb[i][j]);
+                }
+            }
+
+            System.out.println("Subtraction:");
+            for (int i = 0; i < w; i++) {
+                for (int j = 0; j < x; j++) {
+                    System.out.println(aa[i][j] - bb[i][j]);
+                }
+            }
+        }
+    }
+}
+
