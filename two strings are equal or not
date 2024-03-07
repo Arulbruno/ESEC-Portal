@@ -1,0 +1,21 @@
+Program to compare if two strings are equal or not ,ignoring the case
+Input:
+The first line of input is the integer T, denoting number of test cases. The first line of each test case is two input strings Sl , S2 on the same line separated
+by a single space respectively,
+Output:
+For each test case, there is one line of output i.e. whether the Strings are equal or Strings are not equal
+Input
+3
+codevita codevita
+Hackerrank Hackerearth
+Codevita codeVita
+Output :
+Strings
+Strings
+Strings
+are
+are
+are
+equal
+not equal
+equal
