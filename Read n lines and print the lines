@@ -1,0 +1,38 @@
+Read n lines and print the lines
+For example:
+
+Input
+2
+This is the first line
+This is the second line
+Result
+This is the first line
+This is the second line
+
+Input
+1
+This is first line
+Result
+This is the first line
+
+
+Solution:
+//Java
+
+import java.util.Scanner;
+
+public class read_n_Lines_print {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        int in=a.nextInt();
+        a.nextLine();
+        String str[]=new String[in];
+        for(int i=0;i<in;i++){
+            str[i]=a.nextLine();
+        }
+        for(String k:str)
+        System.out.println(k);
+    }
+}
+
+
