@@ -1,0 +1,54 @@
+Write a program to read 2 strings and see if they are equal (ignore case),
+Should not use any built in functions, A function should be written,
+
+For example:
+
+Input    Result
+
+Hello    Yes
+hello
+
+Hai      No
+Bye
+
+Solution:
+//Java
+
+import java.util.Scanner;
+
+public class two_Strings_equalOrNot {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        String aa=a.nextLine();
+        String bb=a.nextLine();
+        char xx[]=aa.toCharArray();
+        char yy[]=bb.toCharArray();
+        for(int i=0;i<xx.length;i++){
+            if(xx[i]>='A' && xx[i]<='Z'){
+                xx[i]+=32;
+            }
+        }
+        for(int i=0;i<yy.length;i++){
+            if(yy[i]>='A' && yy[i]<='Z'){
+                yy[i]+=32;
+            }
+        }
+        if(xx.length!=yy.length){
+            System.out.println("No");
+        }
+        else{
+            int co=0;
+            for(int i=0;i<xx.length;i++){
+                if(xx[i]==yy[i]){
+                    co++;
+                }
+            }
+            if(co==xx.length){
+                System.out.println("Yes");
+            }
+            else{
+                System.out.println("No");
+            }
+        }
+        }
+}
