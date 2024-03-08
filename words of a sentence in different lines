@@ -1,0 +1,37 @@
+Write a program to display the words of a sentence in different lines
+For example:
+
+Input :
+Hello! Good Morning
+Result :
+Hello!
+Good
+morning
+
+Input :
+Hai there
+Result :
+Hai
+there
+
+Solution :
+//Java
+
+import java.util.Scanner;
+
+public class words_separate_Lines {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        String str=a.nextLine();
+        char ch[]=str.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]==' '){
+                System.out.println(' ');
+            }
+            else{
+                System.out.print(ch[i]);
+            }
+        }
+    }
+    
+}
