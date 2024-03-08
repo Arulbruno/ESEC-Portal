@@ -1,0 +1,28 @@
+Write a program to print the following pattern based an input n
+For example:
+Input 
+3
+Result
+1
+2 3
+4 5 6
+
+Solution:
+//Java
+
+import java.util.*;
+public class pattern_incre1 {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        int in=a.nextInt();
+        int co=1;
+        for(int i=0;i<in;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print(co+++" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
