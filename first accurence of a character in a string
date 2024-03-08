@@ -1,0 +1,43 @@
+Return the index of the first accurence of a character in a string
+For example:
+
+Input
+srishakthi
+i
+Result
+1
+
+Input
+GoodBoy
+o
+Result
+2
+
+Input
+Thisisit
+w
+-1
+
+Solution:
+//Java
+
+import java.util.*;
+public class index_of_Occurence_Char {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        String str=a.nextLine();
+        char in=a.next().charAt(0);
+        char ch[]=str.toCharArray();
+        int d=0;
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]==in){
+                System.out.print(i);
+                d++;
+                break;
+            }
+        }
+        if(d==0){
+            System.out.println(-1);
+        }
+    }
+}
