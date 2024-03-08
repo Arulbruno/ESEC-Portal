@@ -1,0 +1,43 @@
+Read and display a set of strings given separated by commas
+For example:
+
+Input :
+Trial, Boys, Car, Nau , This
+Result :
+Trial
+Boys
+Car
+Now
+This
+
+Input :
+Street, Show, This
+Result :
+Street
+Show
+This
+
+Solution :
+//Java
+
+import java.util.Scanner;
+
+public class separated_by_commas {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        String str=a.nextLine();
+        char ch[]=str.toCharArray();
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]==','){
+                System.out.println(' ');
+                // continue;
+            }
+            else if(ch[i]==' '){
+                continue;
+            }
+            else{
+                System.out.print(ch[i]);
+            }
+        }
+    }
+}
