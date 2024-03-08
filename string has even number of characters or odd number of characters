@@ -1,0 +1,38 @@
+Find if a given string has even number of characters or odd number of characters
+For example:
+
+Input    Result
+hello    odd
+good     even
+
+Solution:
+//Java
+
+import java.util.*;
+public class string_char_Odd_or_Even {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        String str=a.nextLine();
+
+         //Type:1
+        int d=0;
+        for(int i=0;i<str.length();i++){
+            d++;
+        }
+        if(d%2==0){
+            System.out.println("even");
+        }
+        else{
+            System.out.println("odd");
+        }
+
+        //Type:2
+        // if(str.length()%2==0){
+        //     System.out.println("even");
+        // }
+        // else{
+        //     System.out.println("odd");
+        // }
+    }
+}
+
