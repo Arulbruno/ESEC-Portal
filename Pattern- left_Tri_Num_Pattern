@@ -1,0 +1,30 @@
+Write a program to display hte given pattern
+For example:
+Input
+5
+Result
+        1
+      2 2
+    3 3 3
+  4 4 4 4
+5 5 5 5 5
+
+Solution;
+//Java
+
+import java.util.*;
+public class left_Tri_Num_Pattern {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        int n=a.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=2*(n-i);j>=1;j--){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+}
