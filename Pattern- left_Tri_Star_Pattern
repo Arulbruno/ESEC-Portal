@@ -1,0 +1,44 @@
+Write a program to display the given pattern
+3
+    *
+  * *
+* * *
+For exam ple:
+Input 
+5
+Result
+        *
+      * *
+    * * *
+  * * * *
+* * * * *    
+Input 
+7
+Result
+            *
+          * *
+        * * *
+      * * * *
+    * * * * *
+  * * * * * *
+* * * * * * *
+
+Solution:
+//Java
+
+import java.util.*;
+public class left_Tri_Star_Pattern {
+    public static void main(String[]ar){
+        Scanner a=new Scanner(System.in);
+        int in=a.nextInt();
+        for(int i=1;i<=in;i++){
+            for(int j=2*(in-i);j>=1;j--){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
